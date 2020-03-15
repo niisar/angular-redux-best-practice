@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Search Coordinate</h2>
+            <app-search-bar (onSelectedOption)="searchCodes($event)"></app-search-bar>
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Address: </strong>
+                    <span *ngFor="let address of geocodes?.results[0].address_components">{{address.long_name}} </span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Longitude:</strong> {{geocodes?.results[0].geometry.location.lng}}
+                </li>
+                <li class="list-group-item"><strong>Latitude:</strong> {{geocodes?.results[0].geometry.location.lat}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
