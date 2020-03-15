@@ -5,6 +5,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { GeoBoardComponent } from './geo-board/geo-board.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { StoreModule } from '@ngrx/store';
+import * as fromGeoDashboard from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { SearchEffects } from './reducers/search.effects';
 
 
 @NgModule({
@@ -25,6 +29,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
         ]
       }
     ]),
+    StoreModule.forFeature(fromGeoDashboard.geoDashboardFeatureKey, fromGeoDashboard.reducers, { metaReducers: fromGeoDashboard.metaReducers }),
+    EffectsModule.forFeature([SearchEffects]),
   ]
 })
 export class GeoDashboardModule { }
