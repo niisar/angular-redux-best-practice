@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 import { IGeo } from './geo-dashboard/reducers/models/geo';
 
 @Injectable({
@@ -16,6 +16,7 @@ export class DataService {
       map((res:any) => {
         let firstResult = res.results[0];
         let response: IGeo = {
+          name: place,
           address_components: firstResult.address_components,
           geometry: firstResult.geometry
         };

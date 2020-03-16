@@ -19,23 +19,10 @@ export class GeoBoardComponent implements OnInit {
   }
   geocodes: any
   ngOnInit(): void {
-    // this.store.dispatch(SearchAction.loadSearchsSuccess({
-    //   data: {
-    //     address_components: [{ long_name: '' }],
-    //     geometry:{
-    //       location: {
-    //         lat: 10,
-    //         lng: 20
-    //       }
-    //     }
-    //   }
-    // }));
     this.geoData.subscribe(res => {
-      console.log(res)
       if(res.search.geodata){
         this.geocodes = res.search.geodata;
       }
-      // this.geocodes = res;
     })
   }
 

@@ -1,4 +1,5 @@
 export interface IGeo {
+    name: string,
     address_components: [
         {
             long_name: string,
@@ -11,3 +12,5 @@ export interface IGeo {
         }
     }
 }
+
+

@@ -21,6 +21,7 @@ export class SearchEffects {
             data: res
           })
         }),
+        
         catchError(err => {
           return of(srch.loadSearchsFailure(err))
         })
