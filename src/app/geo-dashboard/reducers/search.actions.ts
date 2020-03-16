@@ -1,12 +1,14 @@
 import { createAction, props } from '@ngrx/store';
+import { IGeo } from './models/geo';
 
 export const loadSearchs = createAction(
-  '[Search] Load Searchs'
+  '[Search] Load Searchs',
+  props<{ location: string }>()
 );
 
 export const loadSearchsSuccess = createAction(
   '[Search] Load Searchs Success',
-  props<{ data: any }>()
+  props<{ data: IGeo }>()
 );
 
 export const loadSearchsFailure = createAction(

@@ -7,12 +7,12 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <strong>Address: </strong>
-                    <span *ngFor="let address of geocodes?.results[0].address_components">{{address.long_name}} </span>
+                    <span *ngFor="let address of geocodes?.address_components">{{address.long_name}} </span>
                 </li>
                 <li class="list-group-item">
-                    <strong>Longitude:</strong> {{geocodes?.results[0].geometry.location.lng}}
+                    <strong>Longitude:</strong> {{geocodes?.geometry.location.lng}}
                 </li>
-                <li class="list-group-item"><strong>Latitude:</strong> {{geocodes?.results[0].geometry.location.lat}}
+                <li class="list-group-item"><strong>Latitude:</strong> {{geocodes?.geometry.location.lat}}
                 </li>
             </ul>
         </div>

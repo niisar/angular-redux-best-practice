@@ -1,3 +1,6 @@
+https://medium.com/@RupaniChirag/simple-angular-app-using-ngrx-8-store-and-effects-factory-methods-f3423b9f6d3b
+https://docs.google.com/document/d/1F8KadlQLNI8e3TWY9mg0gVI4ZjXUt7GoMiF5tCDhcH4/edit#
+
 # SearchBar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
